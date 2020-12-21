@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Review</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/logout">Log Out</a>
+    <h2>Leave review for: {{course.name}}</h2>
+    <form action="/process_review" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="course_id" value="{{course.id}}">
+    <label for="content">Review:</label>
+    <input type="text" name="content" id="content" required><br>
+    <label for="rating">Rating:</label>
+    <input type="number" name="rating" id="rating" required min="1" max="5"><br>
+    <button>Add Review</button>
+    </form>
+</body>
+</html>

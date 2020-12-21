@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Course</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/logout">Log Out</a>
+    <h2>Info about {{course.name}}</h2>
+    <h4>Name: {{course.name}}</h4>
+    <h4>City: {{course.city}}</h4>
+    <h4>State: {{course.state}}</h4>
+    <h4>Holes: {{course.number_of_holes}}</h4>
+    <h4>Par: {{course.par}}</h4>
+    <hr>
+    <h2>Reviews for {{course.name}}</h2>
+    {% for review in course.reviews.all %}
+        <p>{{review.author.fname}} {{review.author.lname}} says: {{review.content}} | Rating:{{review.rating}}/5</p>
+    {% endfor %}
+</body>
+</html>

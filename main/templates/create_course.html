@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/logout">Log Out</a>
+    <form action="/process_course" method="post">
+        {% csrf_token %}
+        <label for="name">Course Name</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required><br>
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" required><br>
+        <label for="number_of_holes">Number of Holes</label>
+        <input type="number" id="number_of_holes" name="number_of_holes" required><br>
+        <label for="par">Par</label>
+        <input type="number" id="par" name="par" required><br>
+        <button>Create Course</button>
+        {% for message in messages %}
+            <li>{{message}}</li>
+        {% endfor %}
+    </form>
+</body>
+</html>

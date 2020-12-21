@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/dashboard.css' %}">
+</head>
+<body>
+    <a href="/logout">Log Out</a>
+    <h1>Welcome back {{user.fname}}!! </h1>
+
+    <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <section>
+        <header><h1>Your Courses</h1>
+        <div class="yes"><a href="/create_course">Add a course!</a></div>
+        <div class="no">Bummer, your browser doesn't support flexbox</div>
+        </header>
+        <div class="container">
+            <div class="row header">
+            <div class="cell header">Course Name</div>
+            <div class="cell header">City</div>
+            <div class="cell header">State</div>
+            <div class="cell header">Holes</div>
+            <div class="cell header">Par</div>
+            <div class="cell header">Stats</div>
+            <div class="cell header">Actions</div>
+            </div>
+            {% for course in courses %}
+            <div class="row">
+            <div class="cell" title="Name"><span><a href="course/{{course.id}}">{{course.name}}</a></span></div>
+            <div class="cell" title="City"><span>{{course.city}}</span></div>
+            <div class="cell" title="State"><span>{{course.state}}</span></div>
+            <div class="cell" title="Holes"><span>{{course.number_of_holes}}</span></div>
+            <div class="cell" title="Par"><span>{{course.par}}</span></div>
+            <div class="cell" title="Stats"><span><a href="stats/{{course.id}}">Stats</a></span></div>
+            <div class="cell" title="Par"><span><a href="delete_course/{{course.id}}">Remove</a></span>|<a href="review/{{course.id}}">Review</a></div>
+            </div>
+            {% endfor %}
+    </section>
+    
+</body>
+</html>
