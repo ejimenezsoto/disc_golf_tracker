@@ -53,16 +53,14 @@ class Course(models.Model):
     objects = CourseManager()
 
 
-
-
-class Game(models.Model):
-    course = models.ForeignKey(Course, related_name="course_name", on_delete=models.CASCADE )
-    date_time = models.DateTimeField()
-    hole = models.ForeignKey(Course, related_name="hole_number", on_delete=models.CASCADE )
-    par = models.ForeignKey(Course, related_name="par_number", on_delete=models.CASCADE )
-    creator = models.ForeignKey(User, on_delete=models.CASCADE)
-    create_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+# class Game(models.Model):
+#     course = models.ForeignKey(Course, related_name="course_name", on_delete=models.CASCADE )
+#     date_time = models.DateTimeField()
+#     hole = models.ForeignKey(Course, related_name="hole_number", on_delete=models.CASCADE )
+#     par = models.ForeignKey(Course, related_name="par_number", on_delete=models.CASCADE )
+#     creator = models.ForeignKey(User, on_delete=models.CASCADE)
+#     create_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
 
 
 class Review(models.Model):

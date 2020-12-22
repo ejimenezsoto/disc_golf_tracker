@@ -96,7 +96,6 @@ def process_review(request):
 
 
 def game_stats(request, course_id):
-    
     context = {
         'course': Course.objects.get(id=course_id),
         'n' : range(Course.objects.get(id=course_id).number_of_holes) 
@@ -112,7 +111,6 @@ def like_course(request, course_id):
     user = User.objects.get(id=request.session['user_id'])
     course = Course.objects.get(id=course_id)
     course.liked_by.add(user)
-
     return redirect('/dashboard')
 
 

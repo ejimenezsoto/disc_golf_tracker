@@ -23,7 +23,6 @@
             <div class="cell header">State</div>
             <div class="cell header">Holes</div>
             <div class="cell header">Likes</div>
-            <div class="cell header">Stats</div>
             <div class="cell header">Actions</div>
             </div>
             {% for course in courses %}
@@ -33,15 +32,14 @@
             <div class="cell" title="State"><span>{{course.state}}</span></div>
             <div class="cell" title="Holes"><span>{{course.number_of_holes}}</span></div>
             <div class="cell" title="Like"><span>{{course.liked_by.all|length}}</span></div>
-            <div class="cell" title="Stats"><span><a href="stats/{{course.id}}">Stats</a></span></div>
-            <div class="cell" title="Par"><span><a href="/like/{{course.id}}">Like</a></span>|<a href="review/{{course.id}}">Review</a></div>
+            <div class="cell" title="Par"><span><a href="/like/{{course.id}}">Like</a></span> | <a href="review/{{course.id}}">Review</a> | <a href="delete_course/{{course.id}}">Remove</a></div>
             </div>
             {% endfor %}
             <!-- <a href="delete_course/{{course.id}}">Remove</a> -->
     </section>
 
 
-    
+
     
 </body>
 </html>
