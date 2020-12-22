@@ -108,6 +108,13 @@ def delete_course(request, course_id):
     course_to_delete.delete()
     return redirect('/dashboard')
 
+def like_course(request, course_id):
+    user = User.objects.get(id=request.session['user_id'])
+    course = Course.objects.get(id=course_id)
+    course.liked_by.add(user)
+
+    return redirect('/dashboard')
+
 
 def logout(request):
     request.session.clear()
