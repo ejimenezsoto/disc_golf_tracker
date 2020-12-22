@@ -15,5 +15,6 @@ urlpatterns = [
     path('delete_course/<int:course_id>', views.delete_course),
     path('stats/<int:course_id>', views.game_stats),
     path('like/<int:course_id>', views.like_course),
+    path('favorites', views.favorites),
     path('logout', views.logout),
 ]
