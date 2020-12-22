@@ -4,26 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/create-course.css' %}">
 </head>
 <body>
-    <a href="/dashboard">Dashboard</a>
-    <a href="/logout">Log Out</a>
-    <form action="/process_course" method="post">
-        {% csrf_token %}
-        <label for="name">Course Name</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" required><br>
-        <label for="state">State</label>
-        <input type="text" id="state" name="state" required><br>
-        <label for="number_of_holes">Number of Holes</label>
-        <input type="number" id="number_of_holes" name="number_of_holes" required><br>
-        <label for="par">Par</label>
-        <input type="number" id="par" name="par" required><br>
-        <button>Create Course</button>
+    <header class="header-stuff">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Log Out</a>
+    </header>
+    <div class="container">
+        <h2>Add A Course</h2>
+
+        
+        <form action="/process_course" method="post">
+            {% csrf_token %}
+            <div class="fields">
+            <span>
+                <input placeholder=" Course Name" type="text"id="name" name="name" required />
+            </span>
+            <br />
+            <span>
+                <input placeholder="City" type="text" id="city" name="city" required />
+            </span>
+            <br />
+            <span>
+                <input placeholder="State" type="text" id="state" name="state" required />
+            </span>
+            <br />
+            <span>
+                <input placeholder="# of Holes" type="number" id="number_of_holes" name="number_of_holes" required />
+            </span>
+            <br />
+            <span>
+                <input placeholder="Par" type="number" id="par" name="par" required />
+            </span>
+            <br />
+            </div>
+            <div class="submit">
+                <button class="button">Submit</button>
+            </div>
+        </form>
         {% for message in messages %}
-            <li>{{message}}</li>
+            <div class="error">
+                <li class="errors">{{message}}</li>
+            <div>
+
         {% endfor %}
-    </form>
+        </div>
+        
 </body>
 </html>

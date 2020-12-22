@@ -1,0 +1,66 @@
+*{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.top-links {
+  text-align: right;
+  padding: 10px;
+  font-size: 140%;
+}
+
+a {
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.lower-content {
+  margin: 10px;
+  width: 40%;
+}
+
+a:visited {
+  color: black;
+}
+
+
+
+body{
+  background-image: url('https://www.visitbutlercounty.com/sites/default/files/media/photos/attractions/The%20view%20at%20Lakeview%20Disc%20Golf.JPG');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.lower-content {
+  background-color: rgba(255,255,255,.8);
+  margin: 25%;
+  padding: 40px;
+  width: 50%;
+  font-size: xx-large;
+  border-radius: 10px;
+}
+
+input#content {
+  box-shadow: 3px 4px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: x-large;
+}
+
+input#rating {
+  font-size: x-large;
+  width: 7%;
+  box-shadow: 3px 4px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 20%;
+  text-align: center;
+  font-size: large;
+  box-shadow: 3px 4px;
+  border-radius: 5px;
+}

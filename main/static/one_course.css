@@ -1,0 +1,88 @@
+*{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url('https://www.innovadiscs.com/wp-content/uploads/2015/06/course-target-featured.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+
+.top-links {
+  text-align: right;
+  margin-right: 10px;
+  padding: 10px 10px 0px 0px;
+  font-size: 25px;
+}
+
+.course-content {
+  border-radius: 10px;
+  height: 300px;
+  margin: 10px;
+}
+
+h2 {
+  margin: 10px;
+  font-size: 40px;
+}
+
+h4 {
+  margin: 10px;
+  font-size: 28px;
+}
+
+h2.top-name {
+  font-size: 65px;
+  margin: -32px 10px 10px 10px;
+}
+
+p { 
+  margin: 10px 10px 10px 40px;
+  font-size: 22px;
+}
+
+p.rating {
+  margin: 10px 20px 0px 0px;
+  text-align: right;
+  padding-right: 25px;
+}
+
+a:visited {
+  color: black;
+}
+
+a {
+  margin: 10px;
+  text-decoration: none;
+}
+
+div.lower-content {
+  color: black;
+  width: 55%;
+  font-weight: bold;
+}
+
+.reviews {
+  margin: 15px;
+  background-color: rgba(255,255,255,.8);
+  border-radius: 35px;
+  padding: 10px;
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.lower-content {
+  margin: 10px;
+  padding: 10px;
+}
+
+.individual-reviews {
+  border: 3px solid;
+  box-shadow: 2px 2px;
+  margin: 5px 0px 0px 0px;
+  border-radius: 7px;
+}

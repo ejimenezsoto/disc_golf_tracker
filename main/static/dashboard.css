@@ -1,16 +1,11 @@
-body {
-    
-        
-        font:600 15px 'Open Sans',sans-serif;
-    
-}
-
 
 body {
-    background-color: #cccccc;
-    background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
-    background-position: center center;  
+    background-position: center center;
+    background:url(https://i.pinimg.com/originals/f6/c3/23/f6c3239ce841a287ae5bc8d04a402b0e.jpg);
+    background-size: cover;
+    font:600 16px/18px 'Open Sans',sans-serif;
+    
 }
 .flexbox .no,
 .no-flexbox .yes {display: none}
@@ -25,9 +20,44 @@ a {
     text-decoration: none;
     
 }
+.header-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.all-courses{
+    font-size: 60px;
+    text-shadow: 2px 2px white;
+}
+
 a:visited {
     color: rgb(4, 0, 255);
 }
+
+.button {
+	
+	background:linear-gradient(to bottom, #8ad368 5%, #609745 100%);
+	background-color:#71bb4f;
+	border-radius:21px;
+	border:2px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:12px 33px;
+	text-decoration:none;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
 
 header,
 footer {text-align: center;}
@@ -43,18 +73,15 @@ footer {text-align: center;}
     background-color: #1161ee;
 }
 .row {
-    background: gray;
+    background: rgb(192, 186, 186);
 }
 .row.alt {
-    background: #DEDEDE;
+    background: #b1a6a6;
 }
 .flexbox .container {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-}
-.boxshadow .container {
-    box-shadow: 1px 1px 10px 1px #777;
 }
 .flexbox .container .row {
     display: -webkit-flex;

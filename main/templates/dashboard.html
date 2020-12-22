@@ -9,13 +9,16 @@
 </head>
 <body class="background">
     <a href="/logout">Log Out</a>
-    <h1>Welcome back {{user.fname}}!! </h1>
+    <h1 class="all-courses">Welcome Back {{user.fname}}!!</h1>
 
     <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
     <section>
-        <header><h1>All Courses</h1>
-        <div class="yes"> <button class="button"><a href="/create_course">Add A Course!</a></button></div>
-        <div> <button class="button"><a href="/favorites">Liked Courses</a></button></div>
+        <header><h1 class="all-courses">All Courses</h1>
+        <div class="header-buttons">
+            <div class="cell header"> <button class="button"><a href="/create_course">Add A Course!</a></button></div>
+            <div class="cell header"> <button class="button"><a href="/favorites">Liked Courses</a></button></div>
+        </div>
+        
         </header>
         <div class="container">
             <div class="row header">

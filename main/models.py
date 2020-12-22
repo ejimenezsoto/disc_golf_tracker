@@ -30,14 +30,14 @@ class CourseManager(models.Manager):
         errors = {}
         if len(post_data['name']) < 2:
             errors['name_error'] = 'Course name has to be more than two characters!'
-        if len(post_data['city']) < 1:
+        if len(post_data['city']) < 2:
             errors['city_error'] = 'City name has to be more than one character!'
-        if len(post_data['state']) < 1:
+        if len(post_data['state']) < 2:
             errors['state_error'] = 'State name has to be more than one character!'
         if int(post_data['number_of_holes']) < 0:
             errors['number_of_holes_error'] = 'Your hole numbers cant be negative! And must be more than 0!'
         if int(post_data['par']) < 0:
-            errors['par_error'] = 'par cant be negative or one!'
+            errors['par_error'] = 'Par cant be negative or one!'
         return errors
         
 

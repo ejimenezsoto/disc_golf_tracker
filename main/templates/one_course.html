@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Course</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/one_course.css' %}">
 </head>
 <body>
-    <a href="/dashboard">Dashboard</a>
-    <a href="/logout">Log Out</a>
-    <h2>Info about {{course.name}}</h2>
-    <h4>Name: {{course.name}}</h4>
-    <h4>City: {{course.city}}</h4>
-    <h4>State: {{course.state}}</h4>
-    <h4>Holes: {{course.number_of_holes}}</h4>
-    <h4>Par: {{course.par}}</h4>
-    <hr>
-    <h2>Reviews for {{course.name}}</h2>
-    {% for review in course.reviews.all %}
-        <p>{{review.author.fname}} {{review.author.lname}} says: {{review.content}} | Rating:{{review.rating}}/5</p>
-    {% endfor %}
+    <div class="body-wrapper">
+        <div class="top-content">
+            <header>
+                    <div class="top-links">
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/logout">Log Out</a>
+                    </div>
+            </header>
+            <div class="course-content">
+                <h2 class="top-name">{{course.name}}</h2>
+                <h4>City: {{course.city}}</h4>
+                <h4>State: {{course.state}}</h4>
+                <h4>Holes: {{course.number_of_holes}}</h4>
+                <h4>Par: {{course.par}}</h4>
+            </div>
+        </div>
+        <div class="lower-content">
+            <div class="reviews">
+                <h2>Reviews for {{course.name}}</h2>
+                {% for review in course.reviews.all %}
+                <div class="individual-reviews">
+                        <p class="name-and-review">{{review.author.fname}} {{review.author.lname}} says: {{review.content}}</p> 
+                        <p class="rating">Rating: {{review.rating}}/5</p>
+                    </div>
+                    {% endfor %}            
+            </div>
+        </div>
+    </div>
 </body>
 </html>
