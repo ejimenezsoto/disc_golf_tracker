@@ -31,6 +31,7 @@
             <div class="cell header">State</div>
             <div class="cell header">Holes</div>
             <div class="cell header">Likes</div>
+            <div class="cell header">Posted by</div>
             <div class="cell header">Actions</div>
             </div>
             {% for course in courses %}
@@ -40,7 +41,8 @@
             <div class="cell" title="State"><span>{{course.state}}</span></div>
             <div class="cell" title="Holes"><span>{{course.number_of_holes}}</span></div>
             <div class="cell" title="Like"><span>{{course.liked_by.all|length}}</span></div>
-            {% if  course not in user_created_courses %}
+            <div class="cell" title="Like"><span>{{course.created_by.fname}} {{course.created_by.lname}}</span></div>
+            {% if  course in user_created_courses %}
                 <div class="cell" title="Par"><span><a href="/like/{{course.id}}" class="table-links">Like</a></span> | <a href="review/{{course.id}}" class="table-links">Review</a> | <a href="delete_course/{{course.id}}" class="table-links">Remove</a></div>
                 {% else %}
                 <div class="cell" title="Par"><span><a href="/like/{{course.id}}" class="table-links">Like</a></span> | <a href="review/{{course.id}}" class="table-links">Review</a></div>

@@ -28,6 +28,7 @@ a:visited {
     text-align: right;
     padding: 10px;
     font-size: 140%;
+    text-shadow: 2px 2px black;
 }
 
 .container{
@@ -86,7 +87,7 @@ form{
 }
 
 .fields{
-    border-left:2px solid rgb(4, 0, 255);
+    border-left:2px solid black;
 }
 
 .container span{
@@ -110,7 +111,8 @@ form{
 	font-size:18px;
 	font-weight:bold;
 	padding:12px 33px;
-	text-decoration:none;
+    text-decoration:none;
+    box-shadow: 2px 2px black;
 }
 
 .header-stuff{
@@ -132,4 +134,5 @@ input{
     width:220px;
     box-sizing:border-box;
     padding:0 18px; 
+    box-shadow: 3px 3px black;
 }
