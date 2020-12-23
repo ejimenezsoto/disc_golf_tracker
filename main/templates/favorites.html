@@ -10,12 +10,14 @@
 <body>
 
     <body class="background">
-        <a href="/logout">Log Out</a>
-        <a href="/dashboard">Dashboard</a>
+        <div class="top-links">
+            <a href="/dashboard" class="header-link">Dashboard</a>
+            <a href="/logout" class="header-link">Log Out</a>
+        </div>
     
         <script src="//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
         <section>
-            <header><h1>Favorite Courses</h1>
+            <header><h1 class="all-courses">Liked Courses</h1>
             </header>
             <div class="container">
                 <div class="row header">
@@ -28,12 +30,12 @@
                 </div>
                 {% for course in courses %}
                 <div class="row">
-                <div class="cell" title="Name"><span><a href="course/{{course.id}}">{{course.name}}</a></span></div>
+                <div class="cell" title="Name"><span><a href="course/{{course.id}}" class="table-links">{{course.name}}</a></span></div>
                 <div class="cell" title="City"><span>{{course.city}}</span></div>
                 <div class="cell" title="State"><span>{{course.state}}</span></div>
                 <div class="cell" title="Holes"><span>{{course.number_of_holes}}</span></div>
                 <div class="cell" title="Like"><span>{{course.liked_by.all|length}}</span></div>
-                <div class="cell" title="Par"><a href="review/{{course.id}}">Review</a></div>
+                <div class="cell" title="Par"><a href="review/{{course.id}}" class="table-links">Review</a></div>
                 </div>
                 {% endfor %}
                 <!-- <a href="delete_course/{{course.id}}">Remove</a> -->

@@ -9,6 +9,11 @@ body{
   background-image: url('https://www.innovadiscs.com/wp-content/uploads/2015/06/course-target-featured.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
+  background-size: cover;
+}
+
+.text-shadow{
+  text-shadow: 2px 2px white;
 }
 
 

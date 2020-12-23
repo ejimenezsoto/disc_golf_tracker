@@ -8,12 +8,26 @@ html, body{
     background-repeat:   no-repeat;
     background-position: center center;
     background-size: cover;
-
 }
 
 body{
     counter-reset:section;
     text-align:center;
+}
+a {
+    text-decoration: none;
+    padding-right: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+a:visited {
+    color: white;
+}
+
+.top-links {
+    text-align: right;
+    padding: 10px;
+    font-size: 140%;
 }
 
 .container{
@@ -98,16 +112,7 @@ form{
 	padding:12px 33px;
 	text-decoration:none;
 }
-a:visited {
-    color: white;
-}
-a {
-    color: white;
-    word-wrap: break-word;
-    text-decoration: none;
-    font-size: 20px;
-    
-}
+
 .header-stuff{
     display: flex;
     justify-content: space-around;

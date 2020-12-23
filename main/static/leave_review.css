@@ -29,8 +29,9 @@ a:visited {
 
 body{
   background-image: url('https://www.visitbutlercounty.com/sites/default/files/media/photos/attractions/The%20view%20at%20Lakeview%20Disc%20Golf.JPG');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .lower-content {

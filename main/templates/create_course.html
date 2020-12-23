@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="{% static '/create-course.css' %}">
 </head>
 <body>
-    <header class="header-stuff">
+    <div class="top-links">
         <a href="/dashboard">Dashboard</a>
         <a href="/logout">Log Out</a>
-    </header>
+    </div>
+
+    
     <div class="container">
         <h2>Add A Course</h2>
-
-        
         <form action="/process_course" method="post">
             {% csrf_token %}
             <div class="fields">
