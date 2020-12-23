@@ -43,10 +43,15 @@ def login(request):
     return redirect('/')
 
 def dashboard(request):
+    creator = User.objects.get(id=request.session['user_id'])
+    created_course = Course.objects.filter(created_by_id=creator)
+
     context = {
         'user': User.objects.get(id=request.session['user_id']),
-        'courses': Course.objects.all()
+        'courses': Course.objects.all(),
+        'user_created_courses': Course.objects.filter(created_by=creator)
     }
+    
     return render(request,"dashboard.html", context)
 
 def create_course(request):
@@ -65,6 +70,7 @@ def process_course(request):
         state=request.POST['state'],
         number_of_holes=request.POST['number_of_holes'],
         par=request.POST['par'],
+        created_by=User.objects.get(id=request.session['user_id'])
     )
     print(Course.objects.all())
     return redirect('/dashboard')
@@ -115,11 +121,9 @@ def like_course(request, course_id):
     return redirect('/dashboard')
 
 def favorites(request):
-
     context = {
         'courses': Course.objects.filter(liked_by__id=request.session['user_id'])
     }
-
     return render(request, 'favorites.html', context)
 
 def logout(request):

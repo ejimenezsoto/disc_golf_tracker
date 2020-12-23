@@ -48,6 +48,7 @@ class Course(models.Model):
     number_of_holes = models.IntegerField()
     par = models.IntegerField()
     liked_by = models.ManyToManyField(User, related_name="liked_courses")
+    created_by = models.ForeignKey(User, related_name="creator", on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = CourseManager()
